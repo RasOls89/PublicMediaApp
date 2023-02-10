@@ -10,19 +10,19 @@ namespace BusinessLayer
     /// <summary>
     /// Data controller
     /// </summary>
-    public class PublicMediaController
+    public class PublicMedia_Controller
     {
-        public static readonly PublicMediaController Instance = new PublicMediaController();
+        public static readonly PublicMedia_Controller Instance = new PublicMedia_Controller();
         public UserController UserControllers { get; }
 
         public UnitOfWork Context { get; }
 
-        public PublicMediaController()
+        public PublicMedia_Controller()
         {
             Context = new UnitOfWork();
             UserControllers = new UserController();
         }
 
-        //public void Save() => Context.Complete();
+        public void Save() => Context.Complete();
     }
 }

@@ -35,12 +35,12 @@ namespace DataLayer.Internals
             modelBuilder.Entity<User>().Property(b => b.UserId).ValueGeneratedOnAdd();
             modelBuilder.Entity<User>().Property(b => b.UserName);
             modelBuilder.Entity<User>().Property(b => b.AcessRights);
-            modelBuilder.Entity<User>().Property(b => b.Roll);
+            modelBuilder.Entity<User>().Property(b => b.Role);
             modelBuilder.Entity<User>().Property(b => b.FirstName);
             modelBuilder.Entity<User>().Property(b => b.LastName);
             ///Seed for User
             modelBuilder.Entity<User>().HasData
-            (new User { UserId = 1, UserName = "Admin", Roll = "HuvudAdmin", Password = "Admin1", AcessRights = "System", FirstName ="Rasmus", LastName="Olsson" });
+            (new User { UserId = 1, UserName = "Admin", Role = "HuvudAdmin", Password = "Admin1", AcessRights = "System", FirstName ="Rasmus", LastName="Olsson" });
 
 
         }
