@@ -21,6 +21,7 @@ namespace DataLayer.Internals
         #region DbSets
 
         public DbSet<User> users { get; set; }
+        public DbSet<Music> musics { get; set; }
 
         #endregion
 
@@ -42,6 +43,14 @@ namespace DataLayer.Internals
             modelBuilder.Entity<User>().HasData
             (new User { UserId = 1, UserName = "Admin", Role = "HuvudAdmin", Password = "Admin1", AcessRights = "System", FirstName ="Rasmus", LastName="Olsson" });
 
+            ///Music modelbuilder
+            modelBuilder.Entity<Music>().HasKey(b => b.MusicId);
+            modelBuilder.Entity<Music>().Property(b => b.MusicId).ValueGeneratedOnAdd();
+            modelBuilder.Entity<Music>().Property(b => b.BandName);
+            modelBuilder.Entity<Music>().Property(b => b.Titel);
+            modelBuilder.Entity<Music>().Property(b => b.Genre);
+            modelBuilder.Entity<Music>().Property(b => b.Year);
+            modelBuilder.Entity<Music>().Property(b => b.Format);
 
         }
 

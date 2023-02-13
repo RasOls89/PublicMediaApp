@@ -12,10 +12,12 @@ namespace DataLayer
     {
         private PublicMediaContext _context = new PublicMediaContext();
         public Repository<User> UserRepository { get; private set; }
+        public Repository<Music> MusicRepository { get; private set; }
 
         public UnitOfWork()
         {
             UserRepository = new Repository<User>(_context);
+            MusicRepository = new Repository<Music>(_context);
         }
         public void Complete()
         {

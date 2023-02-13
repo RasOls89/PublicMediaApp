@@ -14,13 +14,14 @@ namespace BusinessLayer
     {
         public static readonly PublicMedia_Controller Instance = new PublicMedia_Controller();
         public UserController UserControllers { get; }
-
+        public MusicController MusicControllers { get; }
         public UnitOfWork Context { get; }
 
         public PublicMedia_Controller()
         {
             Context = new UnitOfWork();
             UserControllers = new UserController();
+            MusicControllers = new MusicController();
         }
 
         public void Save() => Context.Complete();
