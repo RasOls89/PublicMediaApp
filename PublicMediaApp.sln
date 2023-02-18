@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicMediaApp", "PublicMediaApp\PublicMediaApp.csproj", "{D4777980-E45F-4897-9E59-88CC1BB1AB4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PublicMediaApp", "PublicMediaApp\PublicMediaApp.csproj", "{D4777980-E45F-4897-9E59-88CC1BB1AB4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{14F80CFE-F7EF-4EE7-96FD-0488031CD46B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{14F80CFE-F7EF-4EE7-96FD-0488031CD46B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{A2E74942-3AF9-4A97-A413-E05BA9B0DE46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Model\Models.csproj", "{A2E74942-3AF9-4A97-A413-E05BA9B0DE46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{A1532106-ADCD-48BF-B469-DCF9388D2EB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "DataLayer\DataLayer.csproj", "{A1532106-ADCD-48BF-B469-DCF9388D2EB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

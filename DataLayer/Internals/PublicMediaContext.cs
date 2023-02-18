@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Model;
+using Models;
 
 namespace DataLayer.Internals
 {
@@ -13,7 +14,6 @@ namespace DataLayer.Internals
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
             optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=PublicMediaApp");
         }
 
@@ -22,6 +22,8 @@ namespace DataLayer.Internals
 
         public DbSet<User> users { get; set; }
         public DbSet<Music> musics { get; set; }
+        public DbSet<Game> games { get; set; }
+        public DbSet<Book> books { get; set; }
 
         #endregion
 
@@ -52,6 +54,23 @@ namespace DataLayer.Internals
             modelBuilder.Entity<Music>().Property(b => b.Year);
             modelBuilder.Entity<Music>().Property(b => b.Format);
 
+            ///Games modelbuilder
+            modelBuilder.Entity<Game>().HasKey(b => b.GameId);
+            modelBuilder.Entity<Game>().Property(b => b.GameId).ValueGeneratedOnAdd();
+            modelBuilder.Entity<Game>().Property(b => b.Titel);
+            modelBuilder.Entity<Game>().Property(b => b.Genre);
+            modelBuilder.Entity<Game>().Property(b => b.Year);
+            modelBuilder.Entity<Game>().Property(b => b.Console);
+            modelBuilder.Entity<Game>().Property(b => b.Developer);
+
+            //Book modelbuilder
+            modelBuilder.Entity<Book>().HasKey(b => b.BookId);
+            modelBuilder.Entity<Book>().Property(b => b.BookId).ValueGeneratedOnAdd();
+            modelBuilder.Entity<Book>().Property(b => b.FNAuthor);
+            modelBuilder.Entity<Book>().Property(b => b.ENAuthor);
+            modelBuilder.Entity<Book>().Property(b => b.Titel);
+            modelBuilder.Entity<Book>().Property(b => b.Genre);
+            modelBuilder.Entity<Book>().Property(b => b.ISBN);
         }
 
         #endregion

@@ -10,21 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using PublicMediaApp.ViewModels;
 
-namespace PublicMediaApp
+namespace PublicMediaApp.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for UserMainMenuView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class UserMainMenuView : Window
     {
-        public MainWindow()
+        public UserMainMenuView()
         {
             InitializeComponent();
-            DataContext = new LoginViewModel();
         }
     }
 }
